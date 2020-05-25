@@ -2,7 +2,7 @@ let crypto
 try {
     crypto = require('crypto')
 } catch (err) {
-    console.error('[fresh-id-node] crypto module not available.')
+    console.error('crypto module not available.')
     throw err
 }
 const { randomBytes } = crypto
@@ -11,10 +11,10 @@ const ALPHANUM = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '
 
 const idGenerator = (length = 15) => {
     if (length < 1) {
-        throw new Error('[fresh-id-node] ids must be at least one character long.')
+        throw new Error('Ids must be at least one character long.')
     }
     if (length < 15) {
-        console.warn('[fresh-id-node] ids shorter than 15 characters are not recommended.')
+        console.warn('Ids shorter than 15 characters are not recommended.')
     }
 
     let id = ''

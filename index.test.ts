@@ -13,7 +13,7 @@ describe('fresh-id-node', () => {
         freshId(10)
 
         expect(warn).toHaveBeenCalledTimes(1)
-        expect(warn).toHaveBeenLastCalledWith('[fresh-id-node] ids shorter than 15 characters are not recommended.')
+        expect(warn).toHaveBeenLastCalledWith('Ids shorter than 15 characters are not recommended.')
     })
 
     it('should not create empty ids', () => {
